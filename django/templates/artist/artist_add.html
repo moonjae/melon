@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add Artist </h1>
+<form method="POST" class="post-form">{% csrf_token %}
+
+    <div><label for="name">이름</label><textarea name="name" class="form-control"></textarea></div>
+    <div><label for="real_name">본명</label><textarea name="real_name" class="form-control"></textarea></div>
+    <div><label for="nationality">국적</label><textarea name="nationality" class="form-control"></textarea></div>
+    <div><label for="birthdate">생년월일</label><input type="date" name="birthdate"></div>
+    <div><label for="constellation">별자리</label><textarea name="constellation" class="form-control"></textarea></div>
+    <div><label for="bloodtype">혈액형</label><textarea name="bloodtype" class="form-control"></textarea></div>
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+
+{% endblock %}
